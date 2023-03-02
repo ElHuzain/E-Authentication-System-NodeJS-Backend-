@@ -11,9 +11,13 @@ router.get('/link', LinkController.RetrieveLinks)
 
 // Makes a new link
 // Request comes from a WEBSERVER requesting a new link
-// {websiteName, accountId, email, secret(websites)}
+// {websiteId, accountId, email, secret(websites)}
 router.post('/link', LinkController.CreateLink)
 
-// Incomplete
+
+// Valdiates an easyaccess login
+// Request comes from a webserver validating code sent to them
+// {email, websiteId, code}
+router.get('/auth', LinkController.Authenticate);
 
 module.exports = router;

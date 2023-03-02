@@ -9,6 +9,22 @@ const router = express.Router();
 // {pin}
 router.post('/register', AccountController.CreateAccount);
 
+// Finds an account via its QRCode
+// Request is made to either grant access to or find an account. (Based on where its used!)
+// {code}
+router.get('/findaccount', AccountController.findQrCode);
+
+// Validates pin sent.
+// {accountId(string), pin(string)}
+router.post('/checkpin', AccountController.ValidatePin);
+
+// Updates an account's lock status
+// {lock(bool), accountId(string)}
+router.post('/lock', AccountController.Lock);
+
+// Checks if QR has been changed or not.
+// {accountId(String), qrcode(String)}
+router.post('/validate', AccountController.Validate);
 // Incomplete
 
 // Recovers an account

@@ -10,27 +10,42 @@ const RetrieveLinks = (req, res) => {
         res.send("Invalid Input").end();
     } else {
         LinkModel.find({accountId: accId}).then((result) => {
+            result.forEach(l => {
+
+            })
             res.send({status: "ok", links: result}).end();
         });
     }
 };
 
+const Authenticate = (req, res) => {
+    // Find link
+    LinkModel.findOne({email: req.query.email, websiteId: req.query.websiteId}).then((link) => {
+        if(!link) return res.send({status: "no", error: "Link Not Found."}).end();
+        
+        let secret = Functions.encrypt(link.key);
+        
+        if(secret == req.query.code) res.send({status: "authenticate"}).end();
+        else res.send({status: "no", error: "Incorrect Code"}).end();
+    })
+    // Validate
+}
 
 const CreateLink = (req, res) => {
 
     // Verify request is coming from a trusted source
-    WebsiteModel.findOne({name: req.body.name}).then((w) => {
+    WebsiteModel.findOne({id: req.body.websiteId}).then((w) => {
+        if(!w) return res.send({status: "no", error: "Website Not Found"}).end();
         // !! Verify request is coming from trusted source HERE
 
         // Check if accountId exists
         AccountModel.findOne({id: req.body.accountId}).then((account) => {
             if(!account){res.send({status: "no", error: "Account ID does not exist."}).end()}
             else {
-
+        
                 // Check if link already exists
                 LinkModel.findOne({
-                    websiteName: req.body.name,
-                    accountId: req.body.accountId,
+                    websiteId: req.body.websiteId,
                     email: req.body.email
                 }).then((result) => {
                     if(result) {
@@ -43,10 +58,11 @@ const CreateLink = (req, res) => {
                             email: req.body.email,
                             key: Functions.generateKey(),
                             accountId: req.body.accountId,
-                            websiteName: req.body.name
+                            websiteId: req.body.websiteId,
+                            websiteName: w.name
                         });
                         
-                        link.save().then((m) => {res.send(m).end()});
+                        link.save().then((m) => {res.send({status: "ok", account: m}).end()});
                     }
                 })
             }
@@ -55,5 +71,5 @@ const CreateLink = (req, res) => {
 }
 
 module.exports = {
-    RetrieveLinks, CreateLink
+    RetrieveLinks, CreateLink, Authenticate
 }

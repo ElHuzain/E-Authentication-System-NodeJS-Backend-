@@ -6,6 +6,7 @@ const linkSchema = new Schema({
     email: String,
     key: String,
     accountId: String,
+    websiteId: String,
     websiteName: String
 }, {versionKey: false});
 

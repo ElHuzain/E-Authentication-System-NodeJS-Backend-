@@ -8,9 +8,9 @@ function encrypt(key){
 
     let result = 0;
     result = key*snapshot;
-    result = result+key;
-    result = result-snapshot;
-    result = Math.round(result);
+    // result = result+key;
+    // result = result-snapshot;
+    // result = Math.round(result);
     return result;
 }
 
@@ -78,4 +78,4 @@ function connect(cb){
 
 function getDatabase(){return dbConnection;}
 
-module.exports = {storeDocument, connect, getDatabase, encrypt, generateId, generateKey}
+module.exports = {storeDocument, connect, getDatabase, encrypt, generateId, generateKey, generateRandomNumbers}
