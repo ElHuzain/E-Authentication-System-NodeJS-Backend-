@@ -2,48 +2,155 @@
 
 <head>
     <div>
-        <link href="./style.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
     </div>
 
 </head>
 
 <body>
-    <div class="dark"></div>
-    <div id="submit">
-        <form action="http://192.168.1.6/add" method="post">
-            <label>IHI</label>
-            <input name="name">
-            <button type="submit" class="buttonstyle">SUBMIT</button>
-        </form>
-        <img src="submit.svg" alt="">
-    </div>
 
-    <header>
-        <img src="/logo.svg" alt="">
-
+    <header class="header">
         <nav>
-            <ul>
+            <img src="logo.svg" class="logo">
+
+            <ul class="nav-links">
                 <li><a href="#main">Home</a></li>
-                <li><a href="#contacts">Contact Us</a></li>
                 <li><a href="#features">Features</a></li>
+                <li><a href="#contacts">Contact Us</a></li>
             </ul>
         </nav>
-
     </header>
 
-    <section id="main">
-        <img src="./main.svg" alt="">
-    </section>
-    <section id="features">
-        <img src="./features.svg" alt="">
-    </section>  
-    <section id="contacts">
-        <img src="contact.svg" alt="">
-    </section>
 
-    <a href="#contacts"><button class="button buttonstyle">YUP. I AM IN!</button></a>
-    
 
+    <div class="container">
+        <section id="main">
+
+            <div class="content">
+                <div>
+                    <h1 class="heading">User Authentication Has Never Been Easier.</h1>
+                    <br><br>
+                    <h1 class="heading2">What is <span class="baige">Easy</span><span class="blue">Access</span>?</h1>
+                    <br>
+                    <p style="font-size: 1.6rem;">EasyAccess is a <span class="green">free</span> passwordless User
+                        Authentication system that you can implement to offer user
+                        an <span class="green">easier</span> and more <span class="green">secure</span> access to your
+                        website.</p>
+                </div>
+                <form class="form">
+                    <p style="width:100%;margin-bottom: 10px;" class="desc">So, are you interested yet?</p>
+                    <div>
+                        <input required placeholder="Organization Name">
+                        <button class="button">PROCEED</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="images">
+                <img src="svg/phones.svg" alt="">
+            </div>
+
+        </section>
+        <section id="features">
+
+            <h1 style="width:fit-content; margin: 0 auto;">Why EasyAccess?</h1>
+            <hr style="margin-top: 3%;">
+
+            <div class="content">
+
+                <div id="ei" class="element">
+                    <h5>It's <span class="yellow">Easily Impelmented</span></h5><br>
+                    <p>3-Step implementation<br><br>1. Submit a request<br>2. Integrate into your system<br>3. That’s
+                        it. Your system is ready</p>
+
+                    <svg width="100" viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M122.85 135.59L135.59 122.85C136.5 121.94 136.955 120.878 136.955 119.665C136.955 118.452 136.5 117.39 135.59 116.48L104.65 85.3125C105.257 83.6442 105.712 81.9758 106.015 80.3075C106.318 78.6392 106.47 76.7433 106.47 74.62C106.47 65.975 103.4 58.5797 97.2608 52.4342C91.1153 46.2947 83.72 43.225 75.075 43.225C72.4967 43.225 69.9183 43.5647 67.34 44.2442C64.7617 44.9297 62.2592 45.8792 59.8325 47.0925L81.2175 68.4775L68.4775 81.2175L47.0925 59.8325C45.8792 62.2592 44.9328 64.7617 44.2533 67.34C43.5678 69.9183 43.225 72.4967 43.225 75.075C43.225 83.72 46.2978 91.1153 52.4433 97.2608C58.5828 103.4 65.975 106.47 74.62 106.47C76.5917 106.47 78.4481 106.318 80.1892 106.015C81.9364 105.712 83.6442 105.257 85.3125 104.65L116.48 135.59C117.39 136.5 118.452 136.955 119.665 136.955C120.878 136.955 121.94 136.5 122.85 135.59ZM91 182C78.4117 182 66.5817 179.61 55.51 174.829C44.4383 170.055 34.8075 163.573 26.6175 155.383C18.4275 147.193 11.9453 137.562 7.1708 126.49C2.39027 115.418 0 103.588 0 91C0 78.4117 2.39027 66.5817 7.1708 55.51C11.9453 44.4383 18.4275 34.8075 26.6175 26.6175C34.8075 18.4275 44.4383 11.9422 55.51 7.1617C66.5817 2.38723 78.4117 0 91 0C103.588 0 115.418 2.38723 126.49 7.1617C137.562 11.9422 147.193 18.4275 155.383 26.6175C163.573 34.8075 170.055 44.4383 174.829 55.51C179.61 66.5817 182 78.4117 182 91C182 103.588 179.61 115.418 174.829 126.49C170.055 137.562 163.573 147.193 155.383 155.383C147.193 163.573 137.562 170.055 126.49 174.829C115.418 179.61 103.588 182 91 182Z"
+                            fill="#F4B400" />
+                    </svg>
+
+                </div>
+
+                <div id="eu" class="element">
+                    <h5>It's <span class="red">Easily Used</span></h5><br>
+                    <p>Access Codes are available at a fingerprint<br><br>Well-made, foolproof mobile application design.</p>
+                    <br>
+                    <svg width="100" viewBox="0 0 164 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="164" height="262" rx="50" fill="black" />
+                        <rect x="8" y="13" width="149" height="237" rx="50" fill="#1E1E1E" />
+                        <rect x="21" y="35" width="122" height="29" rx="8" fill="#0F0F0F" />
+                        <rect x="21" y="71" width="122" height="29" rx="8" fill="#0F0F0F" />
+                        <rect x="21" y="107" width="122" height="29" rx="8" fill="#0F0F0F" />
+                        <rect x="21" y="143" width="122" height="29" rx="8" fill="#0F0F0F" />
+                        <path
+                            d="M82 214C79.7939 214 78 212.333 78 210.282V204.718C78 202.667 79.7939 201 82 201C84.2061 201 86 202.667 86 204.718V210.282C86 212.333 84.2061 214 82 214Z"
+                            stroke="#DB4437" stroke-width="4" stroke-linecap="round" />
+                        <path
+                            d="M94 210.769C93.5391 216.507 88.5611 221 82.523 221C76.1623 221 71 216.018 71 209.88V205.12C71 198.982 76.1623 194 82.523 194C88.492 194 93.4008 198.381 93.977 203.986"
+                            stroke="#DB4437" stroke-width="4" stroke-linecap="round" />
+                        <path
+                            d="M89.25 185H93.75C100.5 185 105 189.5 105 196.25V200.75M60 200.75V196.25C60 189.5 64.5 185 71.25 185H75.75M89.25 230H93.75C100.5 230 105 225.5 105 218.75V214.25M60 214.25V218.75C60 225.5 64.5 230 71.25 230H75.75"
+                            stroke="#DB4437" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+
+                <div id="se" class="element">
+                    <h5>It's <span class="blue">Secure</span></h5><br>
+                    <p>- Complex encryption algorithm<br>- Fingerprint locked application<br>- Reliable account recovery
+                        option</p><br>
+                    <svg width="100" viewBox="0 0 224 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M58.3623 169.599L82.5077 193.754M193.786 142.714C183.535 152.944 170.686 160.18 156.626 163.641C142.566 167.101 127.828 166.656 114.002 162.353L64.5561 211.713C60.9868 215.389 53.9532 217.594 48.9141 216.859L26.0285 213.709C18.47 212.658 11.4363 205.517 10.2815 197.955L7.13215 175.061C6.39729 170.02 8.81182 162.983 12.2762 159.412L61.6167 110.052C53.2183 82.7467 59.7271 51.7654 81.3529 30.236C112.322 -0.745333 162.607 -0.745333 193.681 30.236C224.755 61.2173 224.755 111.733 193.786 142.714Z"
+                            stroke="#3453C0" stroke-width="13" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M139 96C143.243 96 147.313 94.3143 150.314 91.3137C153.314 88.3131 155 84.2435 155 80C155 75.7565 153.314 71.6869 150.314 68.6863C147.313 65.6857 143.243 64 139 64C134.757 64 130.687 65.6857 127.686 68.6863C124.686 71.6869 123 75.7565 123 80C123 84.2435 124.686 88.3131 127.686 91.3137C130.687 94.3143 134.757 96 139 96Z"
+                            stroke="#3453C0" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <div id="fr" class="element">
+                    <h5>It's <span class="green">Free</span></h5><br>
+                    <p>No account required<br>No payment method<br>No fees</p><br>
+
+                    <svg width="100" viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M91 182C40.7407 182 0 141.259 0 91C0 40.7407 40.7407 0 91 0C141.259 0 182 40.7407 182 91C182 141.259 141.259 182 91 182ZM59.15 109.2V127.4H81.9V145.6H100.1V127.4H109.2C115.234 127.4 121.02 125.003 125.287 120.737C129.553 116.47 131.95 110.684 131.95 104.65C131.95 98.6163 129.553 92.8298 125.287 88.5633C121.02 84.2969 115.234 81.9 109.2 81.9H72.8C71.5933 81.9 70.436 81.4206 69.5827 80.5673C68.7294 79.7141 68.25 78.5567 68.25 77.35C68.25 76.1433 68.7294 74.986 69.5827 74.1327C70.436 73.2794 71.5933 72.8 72.8 72.8H122.85V54.6H100.1V36.4H81.9V54.6H72.8C66.7663 54.6 60.9798 56.9969 56.7133 61.2633C52.4469 65.5298 50.05 71.3163 50.05 77.35C50.05 83.3837 52.4469 89.1702 56.7133 93.4367C60.9798 97.7031 66.7663 100.1 72.8 100.1H109.2C110.407 100.1 111.564 100.579 112.417 101.433C113.271 102.286 113.75 103.443 113.75 104.65C113.75 105.857 113.271 107.014 112.417 107.867C111.564 108.721 110.407 109.2 109.2 109.2H59.15Z"
+                            fill="#0F9D58" />
+                    </svg>
+
+                </div>
+
+            </div>
+            <div style="display: flex;flex-direction: column;">
+                <h1>The way it works:</h1><br>
+                <img width="70%" style="margin: 2% auto" src="image/howitworks2.png" alt="">
+            </div>
+
+
+        </section>
+        <section id="contacts">
+            <h1 style="width:fit-content; margin: 0 auto;">Contact Us</h1>
+            <hr style="margin-top: 3%;"><br>
+
+            <form>
+                <h1>Contact Form</h1><br>
+                <hr><br>
+                <label>Name:</label><br>
+                <input required placeholder="ex: Ahmed Huzain"><br><br>
+                <label>Email:</label><br>
+                <input type="email" required placeholder="ex: user@domain.com"><br><br>
+                <label>Message:</label><br>
+                <textarea required rows="10"></textarea><br><br>
+                <button type="submit">Send</button>
+            </form><br> 
+
+            <p style="margin: 0 auto; font-size:20;">&copy; Copyrights Reserved - EasyAccess&trade;</p><br>
+        </section>
+    </div>
 </body>
 
 </html>

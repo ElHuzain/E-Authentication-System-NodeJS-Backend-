@@ -1,119 +1,257 @@
+:root {
+    --bgcolor: #0F0F0F;
+    --primarycolor: #151515;
+    --bluecolor: #3453C0;
+    --baigecolor: #F5F5DC;
+    --greencolor: #99D674;
+    --yellowcolor: #F4B400;
+    --redcolor: #DB4437;
+}
+
+body {
+    font-size: 30;
+    background-color: var(--bgcolor);
+}
+
 * {
     margin: 0;
     scroll-behavior: smooth;
     font-family: sans-serif;
-    transition: all .3s ease-in-out; 
 }
 
-img {
-    z-index: -1;
+a:visited{color: white; text-decoration: none;}
+a {text-decoration: none;}
+
+.heading {
+    font-size: 5rem;
+    font-weight: bold;
 }
 
-.i {
-    position: sticky;
-    top: 0;
-    z-index: 2;
+.heading2 {
+    font-size: 2.5rem;
 }
 
-a{
+.desc {
+    font-size: 20;
+}
+
+.blue {color: var(--bluecolor)}
+.baige {color: var(--baigecolor)}
+.green {color: var(--greencolor)}
+.red {color: var(--redcolor)}
+.yellow {color: var(--yellowcolor)}
+
+/* Header */
+.header {
+    position: fixed;
+    font-size: 30;
+    width: 100%;
+    height: 10%;
+    padding-top: 1em;
+}
+
+.header .logo {
+    width: 7em;
+}
+
+.header nav {
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header ul {
+    display: flex;
+    gap: 3em;
+    list-style: none;
+}
+
+.header li {
+    font-size: 20;
+    color: white;
     text-decoration: none;
 }
-a:hover { text-decoration: underline; color:yellow; }
-a:focus { text-decoration: none; color:white; }
-a:active { text-decoration: none; color:teal; }
-a:visited { 
-    text-decoration: none; 
-    color: white; 
-   }
 
-header img {
-    margin: 1% 4%;
-    max-width: 250;
-    z-index: 5;
-    width: 100%;
-}
-
-.dark {
-    width: 100%;
+/* Body */
+.container {
+    background-image: url('svg/bg.svg');
+    background-size: cover;
     height: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.589);
-    z-index: 9;
+    width: 100%;
+    /* padding: 0 5%; */
 }
 
-#submit {
-    position: absolute;
-    justify-content: center;
+section {
+    color: white;
+    /* height: 100%; */
+    /* align-items: center; */
+    padding: 0 5%;
+    padding-top: 3%;
+}
+
+#main {
+    /* padding-top: 5%; */
+    display: flex;
+    gap: 5%;
+    /* margin: 0 5%; */
+}
+
+#main .content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 50%;
-    /* display: none; */
-    z-index: 10;
-    transform: translate(50%,-50%);
-    top: 50%; right: 50%;
 }
 
-#submit button {
-    position: absolute;
-    transform: translate(50%,-50%);
-    top: 70%; right: 50%;
+#main .images {
+    margin: auto;
     width: 50%;
-    height: 50;
 }
 
+.form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
 
-#submit input {
-    z-index: 99;
-    position: absolute;
-    transform: translate(50%,-50%);
-    top: 50%;
-    right: 50%;
-    background-color: #0F0F0F;
+.form input {
+    background-color: var(--primarycolor);
+    padding: 30px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    color: white;
+    height: 70px;
+    width: 400px;
+}
+
+input:focus {outline: none}
+input {
     border: none;
-    width: 85%;
+}
+
+.form div {
+    display: flex;
+    gap: 20px;
+}
+
+.form button {
+    width: 200px;
+    background-color: var(--bluecolor);
+    color: white;
+    height: 70px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 1px solid var(--bluecolor);
+    transition: all .2s ease-in-out;
+}
+
+.form button:hover {
+    cursor: pointer;
+}
+
+#features {
+    /* display: flex; */
+    justify-content: center;
+    /* height: 100%; */
+    background-image: url('svg/featuresbg.svg');
+    background-size: cover;
+}
+
+#features .content {
+    margin: 3% 0;
+    display: flex;
+    gap: 3%;
+}
+
+#ei:hover {border: 5px solid var(--yellowcolor)}
+#eu:hover {border: 5px solid var(--redcolor)}
+#se:hover {border: 5px solid var(--bluecolor)}
+#fr:hover {border: 5px solid var(--greencolor)}
+
+#features .content .element {
+    width: 20%;
     padding: 2%;
-    font-size: 99%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    background-color: var(--bgcolor);
+    transition: all .1s ease-in-out;
+}
+
+.element h5 {margin: 0 auto;}
+.element svg {margin: auto auto;}
+.element p {font-size: 1rem;}
+
+#contacts {
+    background-image: url('svg/bg.svg');
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contacts form {
+    align-items:start;
+    width: 30%;
+    border-radius: 50px;
+    height: 80%;
+    background-color: var(--primarycolor);
+    margin: 0 auto;
+    padding: 3% 1%;
+    /* margin: 0 3%; */
+}
+
+#contacts form input {
+    width: 100%;
+    background-color: var(--bgcolor);
+    border-radius: 50px;
+    padding: 10px;
     color: white;
 }
 
-header {
-    justify-content: space-between;
+#contacts label {
+    font-size: 1.2rem;
+}
+
+#contacts textarea {
+    color: white;
     width: 100%;
-    /* display: flex; */
-    position: fixed;
-    top: 0;
-}
-
-header ul{
-    display: flex;
-    list-style: none;
-    gap: 3em;
-    font-size: 1rem;
-    color:white;
-    margin: 2em;
-}
-
-nav{
-    float: right;
-}
-
-.button {
-    position: absolute;
-    bottom: 20%;
-    top: 78%; right: 50%;
-    transform: translate(50%,-50%);
-}
-
-.buttonstyle {
+    background-color: var(--bgcolor);
     border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#contacts form button {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 30px;
+    background-color: var(--bluecolor);
+    color: white;
+    border-radius: 50px;
+}
+
+#downloadmain{
+    /* margin: 3%; */
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    color: white;
+}
+
+#downloadmain button {
+    border: none;
+    background-color: var(--bluecolor);
     width: 20%;
-    height: 10%;
     color: white;
     font-weight: bold;
-    font-size: 150%;
-    border-radius: 500px;
-    background-color: #3453C0;
+    font-size: 30px;
+    height: 3em;
+    border-radius: 50px;
 }
 
-.buttonstyle:hover {
-    cursor: pointer;
-    background-color: #13276e;
-}
